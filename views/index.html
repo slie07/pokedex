@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Pokedex</title>
+<!-- 	// Styles // -->
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/skeleton.css">
+
+
+
+<script src="js/mustache.min.js"></script>
+ <script src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body class="body">
+    <header class="col-md-12">
+
+
+<!-- // Title // -->
+    	<div id="jumbo" class="u-full-width">
+    		<h1 class="tittle">PokeDex</h1>
+    	</div>
+
+<!-- // Search Panels // -->
+    	<nav>
+	        	<div class="row">
+				    <div class="six columns">
+				      <label for="pokemonbyNameorId">Get a Pokemon</label>
+				      <input class="u-full-width" type="text" placeholder="Charmander, Pikachu .." id="id">
+				    </div>
+				    <div class="six columns">
+				      <label for="exampleRecipientInput">Get 10 pokemons by type</label>
+				      <select class="u-full-width" id="type">
+				        <option value="">Select a type</option>
+				        <option value="normal">Normal</option>
+				        <option value="poison">Poison</option>
+				        <option value="fire">Fire</option>
+				        <option value="ice">Ice</option>
+				      </select>
+				    </div>
+			    </div>
+				<button class="button-primary" id="invoke">Invoke</button>
+	        </nav>
+    </header>
+<!-- // Saving Your Pokemons // -->
+ <article>
+	    	<div id="cardsBoard"></div>
+	    	<div id="containerPokeball"></div>
+	    	<button id="remove" class="hide button-primary">Save your Pokemons in your Pokeball</button>
+	    </article>
+	<script src="js/index.js"></script>
+</body>
+</html>

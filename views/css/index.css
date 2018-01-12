@@ -1,0 +1,40 @@
+#jumbo {
+	background-image: url(../img/pokedex-header.png);
+	background-size: cover;
+    background-position: center; 
+    height: 200px;
+}
+
+
+
+#cardsBoard {
+	display: block;
+	background-color: #fcf7f4;
+}	
+
+.cartaPokemon {
+	width: 175px;
+	display: inline-grid;
+	padding: 0.5em;
+	border: 0.5em solid #FBC002;
+	border-radius: 110px;
+	background-color: #9CE99E;
+	text-align: center;
+	margin-bottom: 1em;
+	margin-right: 1em;
+}
+
+.loadAnimation {
+	width: 100px;
+	display: inline-grid;
+	background-color: #fcf7f4;
+}
+
+.tittle
+{
+  z-index: +1;
+}
+
+.hide {
+	display: none;
+}
