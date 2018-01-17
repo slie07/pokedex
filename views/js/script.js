@@ -1,15 +1,21 @@
+
+var rootAPI= 'https://pokeapi.co/api/v2/';
+
+
+
 $(function() {
     // GET/READ
     $('#get-button').on('click', function() {
         $.ajax({
-            url: '/products',
+            url: 'https://pokeapi.co/api/v2/',
             contentType: 'application/json',
+            method: 'GET',
             success: function(response) {
                 var tbodyEl = $('tbody');
 
                 tbodyEl.html('');
 
-                response.products.forEach(function(product) {
+                response.products.forEach(function(rootAPI) {
                     tbodyEl.append('\
                         <tr>\
                             <td class="id">' + product.id + '</td>\
@@ -32,7 +38,7 @@ $(function() {
         var createInput = $('#create-input');
 
         $.ajax({
-            url: '/products',
+            url: 'https://pokeapi.co/api/v2/',
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ name: createInput.val() }),
@@ -51,7 +57,7 @@ $(function() {
         var newName = rowEl.find('.name').val();
 
         $.ajax({
-            url: '/products/' + id,
+            url: 'https://pokeapi.co/api/v2/' + id,
             method: 'PUT',
             contentType: 'application/json',
             data: JSON.stringify({ newName: newName }),
@@ -68,7 +74,7 @@ $(function() {
         var id = rowEl.find('.id').text();
 
         $.ajax({
-            url: '/products/' + id,
+            url: 'https://pokeapi.co/api/v2/' + id,
             method: 'DELETE',
             contentType: 'application/json',
             success: function(response) {

@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
+// mongoose.connect("mongodb://localhost/pokemon");
+var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + '/views'));
+app.use(bodyParser.json());
+
 
 
 

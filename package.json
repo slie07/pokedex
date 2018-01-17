@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/slie07/pokedex#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9"
   }
 }
