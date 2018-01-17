@@ -12,6 +12,11 @@ Trello:
 
 https://trello.com/b/OIOOa5M4/project-2
 
+Heroku:
+
+https://desolate-inlet-72548.herokuapp.com/
+
+
 Technology used:
 
 HTML | CSS | Jquery | Node JS | Ajax | Heroku | Monggo 
