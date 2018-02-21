@@ -3,12 +3,30 @@ const app = express();
 // mongoose.connect("mongodb://localhost/pokemon");
 const router = require("./config/routes");
 var bodyParser = require('body-parser');
+const passport = require('passport');
+const session = require('express-session');
+const flash = require('connect-flash');
+
+
+require('./config/passport')(passport);
+
+
+
+
+
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.engine('ejs', require('ejs').renderFile);
+app.set('view engine', 'ejs');
 
 
+
+app.use(session({secret: 'Hello'}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 
 
 
