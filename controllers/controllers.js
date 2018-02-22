@@ -14,8 +14,14 @@ function signup(req,res){
 };
 
 function root(req,res){
-	res.sendFile("/Users/stevanolie/pokedex/views/home.html")
+
+	res.sendFile( __dirname + "/home.html")
+
+
 };
+
+
+
 
 function getForm(req,res){
 	res.sendFile("/Users/stevanolie/pokedex/views/form.html")

@@ -15,11 +15,16 @@ require('./config/passport')(passport);
 
 
 
-app.use(express.static(__dirname + '/public'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.engine('ejs', require('ejs').renderFile);
-app.set('view engine', 'ejs');
+
+
+// app.engine('ejs', require('ejs').renderFile);
+
+app.use(express.static(__dirname + '/public'));
+
+
 
 
 
@@ -30,7 +35,10 @@ app.use(flash());
 
 
 
-app.use('/', router);
+app.use('/', (req,res)=>{
+res.sendFile( __dirname + "/public/home.html")
+	});
+
 
 	
 
